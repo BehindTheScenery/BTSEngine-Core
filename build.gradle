@@ -1,0 +1,82 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+configurations {
+    inc
+    implementation.extendsFrom inc
+    shadow.extendsFrom inc
+    minecraftClientLibraries.extendsFrom inc
+
+    incl
+    implementation.extendsFrom incl
+    include.extendsFrom incl
+    minecraftClientLibraries.extendsFrom incl
+}
+
+repositories {
+    flatDir {
+        dirs "libs"
+    }
+}
+
+dependencies {
+    incl("com.github.ben-manes.caffeine:caffeine:3.2.0")
+
+    ///////////////////////////////
+    //      LWJGL Modules
+    ///////////////////////////////
+
+    inc "org.lwjgl:lwjgl-assimp:${rootProject.lwjgl_version}"
+    inc "org.lwjgl:lwjgl-assimp:${rootProject.lwjgl_version}:natives-windows"
+    inc "org.lwjgl:lwjgl-assimp:${rootProject.lwjgl_version}:natives-linux"
+    inc "org.lwjgl:lwjgl-assimp:${rootProject.lwjgl_version}:natives-macos"
+
+    inc "org.lwjgl:lwjgl-remotery:${rootProject.lwjgl_version}"
+    inc "org.lwjgl:lwjgl-remotery:${rootProject.lwjgl_version}:natives-windows"
+    inc "org.lwjgl:lwjgl-remotery:${rootProject.lwjgl_version}:natives-linux"
+    inc "org.lwjgl:lwjgl-remotery:${rootProject.lwjgl_version}:natives-macos"
+
+    inc "org.lwjgl:lwjgl-tootle:${rootProject.lwjgl_version}"
+    inc "org.lwjgl:lwjgl-tootle:${rootProject.lwjgl_version}:natives-windows"
+    inc "org.lwjgl:lwjgl-tootle:${rootProject.lwjgl_version}:natives-linux"
+    inc "org.lwjgl:lwjgl-tootle:${rootProject.lwjgl_version}:natives-macos"
+
+    inc("org.lwjgl:lwjgl-libdivide:${rootProject.lwjgl_version}")
+    inc("org.lwjgl:lwjgl-libdivide:${rootProject.lwjgl_version}:natives-windows")
+    inc("org.lwjgl:lwjgl-libdivide:${rootProject.lwjgl_version}:natives-linux")
+    inc("org.lwjgl:lwjgl-libdivide:${rootProject.lwjgl_version}:natives-macos")
+
+    inc("org.lwjgl:lwjgl-meshoptimizer:${rootProject.lwjgl_version}")
+    inc("org.lwjgl:lwjgl-meshoptimizer:${rootProject.lwjgl_version}:natives-windows")
+    inc("org.lwjgl:lwjgl-meshoptimizer:${rootProject.lwjgl_version}:natives-linux")
+    inc("org.lwjgl:lwjgl-meshoptimizer:${rootProject.lwjgl_version}:natives-macos")
+
+    incl("com.lmax:disruptor:3.4.4")
+    incl "dev.behindthescenery.multiengine:JavaMultiEngine:1.0.2"
+    incl "org.jctools:jctools-core:4.0.3"
+//    incl "org.apache.commons:commons-pool3:3.0.0"
+}
+
+shadowJar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    configurations = [project.configurations.shadow]
+    archiveClassifier.set('shadow')
+
+    dependencies {
+        exclude(dependency("org.lwjgl:lwjgl"))
+        exclude(dependency("org.lwjgl:lwjgl-glfw"))
+        exclude(dependency("org.lwjgl:lwjgl-opengl"))
+        exclude(dependency("com.google.errorprone:error_prone_annotations"))
+    }
+}
+
+tasks.register("remapShadowJar", net.fabricmc.loom.task.RemapJarTask) {
+    dependsOn shadowJar
+    inputFile.set(shadowJar.archiveFile) // Если не работает, замени на shadowJar.outputs.files.singleFile
+    archiveClassifier.set("") // Убираем "shadow", чтобы финальный JAR был без суффикса
+}
+
+build {
+    dependsOn remapShadowJar
+}

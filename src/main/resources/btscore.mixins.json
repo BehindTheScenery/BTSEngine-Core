@@ -1,0 +1,26 @@
+{
+  "required": true,
+  "package": "dev.behindthescenery.core.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [
+    "CollisionDebugRendererMixin",
+    "access.render.BufferAllocatorAccessor",
+    "access.render.BufferBuilderAccessor",
+    "access.render.BuiltBufferAccess",
+    "access.render.CloseableBufferAccessor",
+    "access.render.FrustumAccess",
+    "access.render.TessellatorAccessor",
+    "expander.render.SpriteMixin",
+    "modifie.render.BufferBuilderMixin",
+    "modifie.render.VertexConsumerProvider$ImmediateMixin"
+  ],
+  "mixins": [
+    "CollisionViewMixin",
+    "DebugRendererMixin",
+    "rendering.TextureUtilsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
