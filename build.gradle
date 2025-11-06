@@ -5,7 +5,7 @@ plugins {
 configurations {
     inc
     implementation.extendsFrom inc
-    shadow.extendsFrom inc
+    include.extendsFrom inc
     minecraftClientLibraries.extendsFrom inc
 
     incl
@@ -51,6 +51,13 @@ dependencies {
     inc("org.lwjgl:lwjgl-meshoptimizer:${rootProject.lwjgl_version}:natives-windows")
     inc("org.lwjgl:lwjgl-meshoptimizer:${rootProject.lwjgl_version}:natives-linux")
     inc("org.lwjgl:lwjgl-meshoptimizer:${rootProject.lwjgl_version}:natives-macos")
+
+    inc("io.github.spair:imgui-java-lwjgl3:${project.imguiVersion}")
+    inc("io.github.spair:imgui-java-binding:${project.imguiVersion}")
+    inc("io.github.spair:imgui-java-natives-windows:${project.imguiVersion}")
+//    minecraftClientRuntimeLibraries("io.github.spair:imgui-java-lwjgl3:${project.imguiVersion}")
+//    minecraftClientRuntimeLibraries("io.github.spair:imgui-java-binding:${project.imguiVersion}")
+//    minecraftClientRuntimeLibraries("io.github.spair:imgui-java-natives-windows:${project.imguiVersion}")
 
     incl("com.lmax:disruptor:3.4.4")
     incl "dev.behindthescenery.multiengine:JavaMultiEngine:1.0.2"
