@@ -1,14 +1,12 @@
 package dev.behindthescenery.core;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import dev.behindthescenery.core.multiengine.BtsEngineExecutor;
 import dev.behindthescenery.core.system.profiler.remotery.RemoteryProfiler;
-import dev.behindthescenery.core.system.rendering.RenderThreads;
-import dev.behindthescenery.multiengine.ModulesBits;
+import dev.behindthescenery.core.system.user_interface.imgui.init.ReworkImGuiMain;
 import dev.behindthescenery.multiengine.MultiEngine;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ChunkSectionPos;
-import net.minecraft.world.gen.structure.Structure;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.bus.api.IEventBus;
@@ -35,6 +33,8 @@ public class BtsCore {
             Client.initialize();
         }
 
+
+
         MultiEngine.initialize(BTS_ENGINE_EXECUTOR);
     }
 
@@ -48,6 +48,7 @@ public class BtsCore {
         private static final BlockPos position = new BlockPos(20, -40, 0);
 
         public static void initialize() {
+            RenderSystem.recordRenderCall(ReworkImGuiMain::new);
 
             try {
 //                if (LoadAssimp) AssimpResourcesImpl.initialize();

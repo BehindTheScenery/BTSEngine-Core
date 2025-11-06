@@ -13,12 +13,16 @@
     "access.render.TessellatorAccessor",
     "expander.render.SpriteMixin",
     "modifie.render.BufferBuilderMixin",
-    "modifie.render.VertexConsumerProvider$ImmediateMixin"
+    "modifie.render.VertexConsumerProvider$ImmediateMixin",
+    "user_interface.MinecraftClientMixin",
+    "user_interface.RenderSystemMixin",
+    "user_interface.ScreenMixin"
   ],
   "mixins": [
     "CollisionViewMixin",
     "DebugRendererMixin",
-    "rendering.TextureUtilsMixin"
+    "rendering.TextureUtilsMixin",
+    "user_interface.GuiLayerManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

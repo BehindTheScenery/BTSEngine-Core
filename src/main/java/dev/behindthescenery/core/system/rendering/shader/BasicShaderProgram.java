@@ -3,9 +3,9 @@ package dev.behindthescenery.core.system.rendering.shader;
 import dev.behindthescenery.core.BtsCore;
 import dev.behindthescenery.core.system.rendering.shader.errorListener.ShaderError;
 import dev.behindthescenery.core.system.rendering.shader.errorListener.ShaderErrorListener;
-import dev.behindthescenery.core.system.rendering.shader.uniform.ShaderUniformType;
 import dev.behindthescenery.core.system.rendering.shader.uniform.ShaderUniform;
 import dev.behindthescenery.core.system.rendering.shader.uniform.ShaderUniformImpl;
+import dev.behindthescenery.core.system.rendering.shader.uniform.ShaderUniformType;
 import net.minecraft.client.render.VertexFormat;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
@@ -13,7 +13,8 @@ import org.lwjgl.opengl.GL20;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.Collection;
+import java.util.HashSet;
 
 public class BasicShaderProgram implements ShaderProgram{
 

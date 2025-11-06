@@ -1,7 +1,5 @@
 package dev.behindthescenery.core.utils.mixin;
 
-import java.util.Objects;
-
 public class MixinApplier {
 
     protected final String applyClass;

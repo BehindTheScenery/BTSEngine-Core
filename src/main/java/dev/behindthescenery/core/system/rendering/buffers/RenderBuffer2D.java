@@ -2,7 +2,6 @@ package dev.behindthescenery.core.system.rendering.buffers;
 
 import dev.behindthescenery.core.system.rendering.color.SimpleColor;
 import dev.behindthescenery.core.system.rendering.utils.DrawDirection;
-import dev.behindthescenery.core.system.rendering.utils.QuadVector;
 import dev.behindthescenery.core.system.rendering.utils.TriangleVector;
 import net.minecraft.client.render.VertexConsumer;
 import org.joml.Matrix4f;

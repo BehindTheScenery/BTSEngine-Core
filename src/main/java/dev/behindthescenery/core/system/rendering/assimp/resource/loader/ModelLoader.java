@@ -2,7 +2,6 @@ package dev.behindthescenery.core.system.rendering.assimp.resource.loader;
 
 
 import dev.behindthescenery.core.system.rendering.TextureType;
-import dev.behindthescenery.core.system.rendering.assimp.resource.model.*;
 import dev.behindthescenery.core.system.rendering.assimp.resource.model.basic.Material;
 import dev.behindthescenery.core.system.rendering.assimp.resource.model.basic.Model;
 import dev.behindthescenery.core.system.rendering.assimp.resource.model.basic.Node;
@@ -15,7 +14,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.lwjgl.assimp.Assimp.*;
+import static org.lwjgl.assimp.Assimp.AI_MATKEY_NAME;
+import static org.lwjgl.assimp.Assimp.aiTextureType_NONE;
 
 public class ModelLoader {
     public static Model loadScene(Model model, AIScene scene) {

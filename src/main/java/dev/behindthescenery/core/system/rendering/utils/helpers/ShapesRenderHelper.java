@@ -6,7 +6,10 @@ import dev.behindthescenery.core.system.rendering.buffers.RenderBuffer2D;
 import dev.behindthescenery.core.system.rendering.color.SimpleColor;
 import dev.behindthescenery.core.system.rendering.utils.DrawDirection;
 import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.render.*;
+import net.minecraft.client.render.BufferBuilder;
+import net.minecraft.client.render.Tessellator;
+import net.minecraft.client.render.VertexFormat;
+import net.minecraft.client.render.VertexFormats;
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
 

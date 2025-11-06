@@ -2,11 +2,9 @@ package dev.behindthescenery.core.system.rendering.assimp.shaders;
 
 import dev.behindthescenery.core.system.rendering.TextureType;
 import dev.behindthescenery.core.system.rendering.shader.BasicInstancingShaderProgram;
-import dev.behindthescenery.core.system.rendering.shader.BasicShaderProgram;
 import dev.behindthescenery.core.system.rendering.shader.errorListener.ShaderError;
 import dev.behindthescenery.core.system.rendering.shader.errorListener.ShaderErrorListener;
 import dev.behindthescenery.core.system.rendering.shader.uniform.ShaderUniformType;
-import net.minecraft.client.render.VertexFormat;
 import net.minecraft.client.render.VertexFormats;
 import net.minecraft.util.Pair;
 import org.intellij.lang.annotations.Language;

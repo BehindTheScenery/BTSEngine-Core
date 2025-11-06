@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[4,)"
 #issueTrackerURL = ""
-license = "GNU GPLv3"
+license = "All Rights Reserved"
 
 [[mods]]
 modId = "${mod_id}"

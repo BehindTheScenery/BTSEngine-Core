@@ -4,7 +4,6 @@ import dev.behindthescenery.core.system.rendering.assimp.resource.model.Bounding
 import dev.behindthescenery.core.system.rendering.color.RGB;
 import dev.behindthescenery.core.system.rendering.color.RGBA;
 import dev.behindthescenery.core.system.rendering.color.SimpleColor;
-import net.minecraft.util.math.Box;
 import org.joml.*;
 
 import java.util.function.Consumer;

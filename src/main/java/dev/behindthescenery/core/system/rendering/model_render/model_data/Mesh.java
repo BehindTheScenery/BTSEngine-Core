@@ -3,9 +3,9 @@ package dev.behindthescenery.core.system.rendering.model_render.model_data;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import dev.behindthescenery.core.system.rendering.BtsRenderSystem;
+import dev.behindthescenery.core.system.rendering.assimp.resource.model.basic.Material;
 import dev.behindthescenery.core.system.rendering.model_render.buffer.BasicMeshBuffer;
 import dev.behindthescenery.core.system.rendering.model_render.buffer.GpuMeshBuffer;
-import dev.behindthescenery.core.system.rendering.assimp.resource.model.basic.Material;
 import dev.behindthescenery.core.utils.CollectionsUtils;
 import net.minecraft.client.render.VertexConsumer;
 import net.neoforged.api.distmarker.Dist;
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 public final class Mesh {
 

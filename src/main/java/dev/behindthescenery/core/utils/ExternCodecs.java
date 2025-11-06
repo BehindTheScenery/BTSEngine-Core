@@ -2,7 +2,6 @@ package dev.behindthescenery.core.utils;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import dev.behindthescenery.core.system.rendering.assimp.resource.model.BoundingBox;
 import net.minecraft.util.math.Box;
 import org.joml.*;
 

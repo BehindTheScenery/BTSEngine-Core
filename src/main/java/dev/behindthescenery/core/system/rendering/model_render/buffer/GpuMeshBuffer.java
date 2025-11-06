@@ -1,6 +1,5 @@
 package dev.behindthescenery.core.system.rendering.model_render.buffer;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import dev.behindthescenery.core.BtsCore;
 import dev.behindthescenery.core.system.rendering.BtsRenderSystem;
 import dev.behindthescenery.core.system.rendering.model_render.model_data.Mesh;
@@ -18,9 +17,11 @@ import org.lwjgl.system.MemoryUtil;
 
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL15.*;
-import static org.lwjgl.opengl.GL20.*;
+import static org.lwjgl.opengl.GL20.glEnableVertexAttribArray;
+import static org.lwjgl.opengl.GL20.glVertexAttribPointer;
 import static org.lwjgl.opengl.GL30.*;
 
 @OnlyIn(Dist.CLIENT)

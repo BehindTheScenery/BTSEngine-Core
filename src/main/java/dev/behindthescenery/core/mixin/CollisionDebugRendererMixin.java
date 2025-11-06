@@ -1,6 +1,5 @@
 package dev.behindthescenery.core.mixin;
 
-import com.google.common.collect.ImmutableList;
 import dev.behindthescenery.core.system.rendering.managers.LevelRenderManager;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;

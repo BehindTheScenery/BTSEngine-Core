@@ -5,7 +5,6 @@ import net.minecraft.util.Util;
 import org.joml.Matrix4f;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
-import sun.misc.Unsafe;
 
 @SuppressWarnings("unused")
 public class MathUtils {

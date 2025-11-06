@@ -1,7 +1,6 @@
 package dev.behindthescenery.core.system.rendering.assimp.resource.buffers;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-import com.mojang.blaze3d.systems.RenderSystem;
 import dev.behindthescenery.core.system.rendering.BtsRenderSystem;
 import dev.behindthescenery.core.system.rendering.assimp.resource.model.BoundingBox;
 import net.minecraft.client.util.math.MatrixStack;

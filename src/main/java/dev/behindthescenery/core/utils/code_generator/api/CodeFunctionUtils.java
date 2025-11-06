@@ -1,7 +1,5 @@
 package dev.behindthescenery.core.utils.code_generator.api;
 
-import dev.behindthescenery.core.utils.code_generator.basic.FunctionCodeElementImpl;
-
 public class CodeFunctionUtils {
 
 //    public static <T> FunctionCodeElementImpl fun(String name, T element) {}
